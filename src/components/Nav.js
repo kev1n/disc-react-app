@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+import ProfilePicture from "./ProfilePicture";
+
 export default function Nav() {
+  const navigate = useNavigate();
+
   return (
     <nav>
       <img
@@ -9,12 +14,11 @@ export default function Nav() {
       <button id="search-container">
         <div>Search</div>
       </button>
-      <img
-        src="https://i.dailymail.co.uk/1s/2024/04/19/18/83860575-13328233-Mark_Zuckerberg_has_been_teased_online_for_hitting_puberty_late_-a-15_1713546465289.jpg"
-        id="pfp"
-        width="30"
-        height="30"
+      <ProfilePicture
+        diameter={30}
+        image="https://i.dailymail.co.uk/1s/2024/04/19/18/83860575-13328233-Mark_Zuckerberg_has_been_teased_online_for_hitting_puberty_late_-a-15_1713546465289.jpg"
         alt="mark zuckerberg"
+        onClick={() => navigate("/profile")}
       />
     </nav>
   );

@@ -1,13 +1,13 @@
+import ProfilePicture from "./ProfilePicture";
+
 export default function OtherUserCard({ profile }) {
-  console.log(profile);
   return (
     <div className="post">
       <div className="post-header">
-        <img
-          src={profile.profilePicture}
+        <ProfilePicture
+          diameter={36}
+          image={profile.profilePicture}
           alt={`${profile.firstName}'s profile picture`}
-          width="36"
-          height="36"
         />
         <div className="post-name-and-tags">
           <h4>
