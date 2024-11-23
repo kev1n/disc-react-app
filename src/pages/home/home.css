@@ -1,38 +1,7 @@
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 10px;
-  margin: 0 10px;
-}
-svg {
-  margin-right: 5px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
 .icon,
 .text {
   vertical-align: middle;
   display: inline-block;
-}
-
-#search-container {
-  background-color: #fcf3ee;
-  width: 500px;
-  height: 28px;
-  display: grid;
-  place-items: center;
-  border-radius: 20px;
-  border: none;
-}
-
-#pfp {
-  border-radius: 100%;
 }
 
 #main-body {

@@ -1,0 +1,38 @@
+.post {
+  border-color: var(--outline);
+  background: var(white);
+  width: 100%;
+}
+
+.post-header {
+  display: flex;
+  gap: 10px;
+}
+
+.post-name-and-tags h4 {
+  margin: 0;
+}
+
+.post-names-and-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tags span {
+  width: 50px;
+  background-color: var(--primary-opacity-10);
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 100px;
+}
+
+.post-header image {
+  border-radius: 999px;
+}
