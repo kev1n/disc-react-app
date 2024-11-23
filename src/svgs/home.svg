@@ -1,0 +1,30 @@
+<svg
+                class="icon"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="30" height="30" fill="url(#pattern0_10_127)" />
+                <defs>
+                  <pattern
+                    id="pattern0_10_127"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlinkHref="#image0_10_127"
+                      transform="scale(0.0333333)"
+                    />
+                  </pattern>
+                  <image
+                    alt="home icon"
+                    id="image0_10_127"
+                    width="30"
+                    height="30"
+                    xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzElEQVR4nO3UMQrCMBiG4RcHJ8HFwdkbeAAnFz2AV/AKXsBb9A5uzoJFpcdQJwdHFwUjgQQklPCnJKKSFz4oxfaBqoWcrAGwBw7m+CONgAugzK7AODU6B+5vqN0DWKQA20BRA7orzGd1O3OubIr2gI0AtdNg3zkX3BA4BqB27jVBzYBbA7RuolrAEnhGQpW5p7cOsIoI2q2Brg+uEqB2lQ8uE8JbyfccGxX3U7BbhkXlR63yj4sv+jupGC+Qc0T0FAJPI+EanYTAuf/pBVcEg4oAM+4VAAAAAElFTkSuQmCC"
+                  />
+                </defs>
