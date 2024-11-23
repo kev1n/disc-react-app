@@ -1,4 +1,12 @@
+import { useState, useEffect } from "react";
+
 export default function Post() {
+  const [likes, setLikes] = useState(0);
+
+  useEffect(() => {
+    console.log(likes);
+  }, [likes]);
+
   return (
     <div className="post">
       <div className="post-header">
@@ -23,8 +31,14 @@ export default function Post() {
           let me know!
         </p>
       </div>
-      <div>
+      <div className="post-footer">
         <a className="comment">Add a comment</a>
+        <div className="like-container">
+          <button className="like-button" onClick={() => setLikes(likes + 1)}>
+            Like
+          </button>
+          <span>{likes} likes</span>
+        </div>
       </div>
     </div>
   );
