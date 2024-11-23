@@ -1,21 +1,41 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import "./discover.css";
 import OtherUserCard from "../../components/OtherUserCard";
 
 export default function Discover() {
+  const [loading, users, reloadUsers] = useGetUsers();
+
+  const memoizedUserCards = useMemo(() => {
+    console.log("rerendering");
+    return users.map((user) => <OtherUserCard profile={user} key={user._id} />);
+  }, [JSON.stringify(users)]);
+
+  return (
+    <div className="discover">
+      <button onClick={() => reloadUsers()}>reload users</button>
+      <div>{loading ? "loading..." : ""}</div>
+      <div className="posts">{!loading && memoizedUserCards}</div>
+    </div>
+  );
+}
+
+function useGetUsers() {
   const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    reloadUsers(setUsers, setLoading);
+  }, []);
+
+  function reloadUsers() {
+    setLoading(true);
     fetch("https://disc-assignment-5-users-api.onrender.com/api/users")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
+        setLoading(false);
       });
-  }, []);
+  }
 
-  return (
-    <div className="posts">
-      {users && users.map((user) => <OtherUserCard profile={user} />)}
-    </div>
-  );
+  return [loading, users, reloadUsers];
 }

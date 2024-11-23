@@ -1,5 +1,4 @@
 export default function OtherUserCard({ profile }) {
-  console.log(profile);
   return (
     <div className="post">
       <div className="post-header">
