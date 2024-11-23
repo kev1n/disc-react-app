@@ -1,7 +1,6 @@
 import { ReactComponent as Discover } from "../svgs/discover.svg";
 import { ReactComponent as Home } from "../svgs/home.svg";
 import { ReactComponent as Chat } from "../svgs/chat.svg";
-import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -12,12 +11,10 @@ export default function Sidebar() {
             <Home />
             <span className="text">Home</span>
           </li>
-          <Link to="/discover">
-            <li className="li-image">
-              <Discover />
-              <span className="text highlight">Discover</span>
-            </li>
-          </Link>
+          <li className="li-image">
+            <Discover />
+            <span className="text">Discover</span>
+          </li>
           <li className="li-image">
             <Chat />
             <span className="text">Chats</span>

@@ -1,31 +1,19 @@
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-import Home from "./pages/home/home";
-import Discover from "./pages/discover/discover";
+import "./App.css";
 import Nav from "./components/Nav";
 import Sidebar from "./components/Sidebar";
-import "./App.css";
-
-export default function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="discover" element={<Discover />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
-}
-
-function Layout() {
+import Post from "./components/Post";
+function App() {
   return (
     <div className="App">
       <Nav />
       <div id="main-body">
         <Sidebar />
-        <Outlet />
+        <div className="posts">
+          <Post />
+        </div>
       </div>
     </div>
   );
 }
+
+export default App;
