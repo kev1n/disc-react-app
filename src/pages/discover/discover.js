@@ -1,6 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 import "./discover.css";
 import OtherUserCard from "../../components/OtherUserCard";
+import { supabase } from "../../App";
 
 export default function Discover() {
   const [loading, users, reloadUsers] = useGetUsers();
@@ -27,9 +28,14 @@ function useGetUsers() {
     reloadUsers(setUsers, setLoading);
   }, []);
 
-  function reloadUsers() {
+  async function reloadUsers() {
+    const { data, error } = await supabase.auth.getSession();
     setLoading(true);
-    fetch("http://localhost:3005/api/users")
+    fetch("http://localhost:3005/api/users", {
+      headers: {
+        Authorization: `Bearer ${data.session.access_token}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
