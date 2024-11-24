@@ -25,7 +25,11 @@ export default function OtherUserCard({ profile }) {
         </div>
       </div>
       <div>
-        <p>{profile.bio || "No bio found"}</p>
+        <p>
+          {profile.bio ||
+            (profile.user_profiles && profile.user_profiles.bio) ||
+            "No bio found"}
+        </p>
       </div>
     </div>
   );
