@@ -29,7 +29,7 @@ function useGetUsers() {
 
   function reloadUsers() {
     setLoading(true);
-    fetch("https://disc-assignment-5-users-api.onrender.com/api/users")
+    fetch("http://localhost:3005/api/users")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);

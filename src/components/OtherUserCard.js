@@ -11,7 +11,8 @@ export default function OtherUserCard({ profile }) {
         />
         <div className="post-name-and-tags">
           <h4>
-            {profile.firstName} {profile.lastName}
+            {profile.firstName} {profile.lastName} {profile.first_name}{" "}
+            {profile.last_name}
           </h4>
           <div className="tags">
             <span> {profile.email || "No email found"} </span>
